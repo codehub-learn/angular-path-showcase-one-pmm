@@ -1,0 +1,15 @@
+footer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+}
+
+#generalContainer {
+  width: 91%;
+  margin-top: 2.5%;
+  padding: 0;
+  overflow: hidden;
+  border-width: 1px !important;
+  text-align: center;
+}
