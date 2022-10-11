@@ -8,6 +8,7 @@ import { AllUsersComponent } from './modules/all-users/all-users.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './core/footer/footer.component';
     UserRegistrationComponent,
     AllUsersComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
