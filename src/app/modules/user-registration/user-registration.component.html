@@ -1,7 +1,12 @@
 <div class="container" id="generalContainer">
   <div class="row">
     <div class="col-12">
-      User Registration
+      <form [formGroup]="userRegistrationForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="First Name" formControlName="first_name">
+        <span *ngIf="userRegistrationForm.get('first_name')?.touched">This field is required</span>
+        <input type="text" placeholder="Last Name" formControlName="last_name">
+        <button type="submit" class="btn btn-secondary" [disabled]="userRegistrationForm.invalid">Submit</button>
+      </form>
     </div>
   </div>
 </div>

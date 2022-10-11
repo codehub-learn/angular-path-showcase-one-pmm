@@ -11,6 +11,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import {HttpClientModule} from "@angular/common/http";
 import { UserDetailsComponent } from './modules/user-details/user-details.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserDetailsComponent } from './modules/user-details/user-details.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
