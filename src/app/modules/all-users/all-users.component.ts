@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from "../../services/user.service";
+import {User} from "../../shared/domain/user";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-all-users',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllUsersComponent implements OnInit {
 
-  constructor() { }
+  users: User[] = [];
 
-  ngOnInit(): void {
+  constructor(private userService: UserService, private router: Router) {
   }
 
+  ngOnInit(): void {
+    this.fetchUsers();
+  }
+
+  fetchUsers() {
+    this.userService.get().subscribe((users) => {
+      this.users = users;
+    });
+  }
+
+  redirectToUserDetails(id: string) {
+    let url = this.router.url;
+    this.router.navigate([url, id]);
+    console.log(url);
+  }
 }

@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
+import {HttpClientModule} from "@angular/common/http";
+import { UserDetailsComponent } from './modules/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
     AllUsersComponent,
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
